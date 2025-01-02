@@ -1,6 +1,5 @@
 package br.com.zup.gateway.controllers.dtos;
 
-
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -23,7 +22,10 @@ public class ConsumerAddressRegisterDTO {
     @Email(message = "Out of the norm")
     private String email;
 
-    public ConsumerAddressRegisterDTO() {
-    }
+    @NotBlank(message = "Address cannot be blank")
+    private AddressDTO address;
 
+    public ConsumerAddressRegisterDTO() {
+
+    }
 }

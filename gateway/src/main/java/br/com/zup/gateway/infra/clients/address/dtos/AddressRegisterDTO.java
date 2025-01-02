@@ -7,7 +7,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class AddressRegisterDto {
+public class AddressRegisterDTO {
 
     @NotBlank(message = "The 'street' field cannot be empty.")
     @Size(max = 100, message = "The 'street' field must have a maximum of 100 characters.")
@@ -29,6 +29,7 @@ public class AddressRegisterDto {
     @Size(max = 36, message = "The 'consumerId' field must have a maximum of 36 characters.")
     private String consumerId;
 
-    public AddressRegisterDto() {
+    public AddressRegisterDTO() {
+
     }
 }
